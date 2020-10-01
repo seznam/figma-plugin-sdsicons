@@ -1,0 +1,32 @@
+.filter__form {
+	padding: 8px;
+	margin: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.filter__label {
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 2px;
+	padding: 4px;
+	font-size: 11px;
+	display: flex;
+	width: 100%;
+	color: #b3b3b3;
+}
+
+.filter__label:focus-within {
+	border: 1px solid transparent;
+	outline: 2px solid #18a0fb;
+}
+
+.filter__input {
+	color: #333333;
+	font-size: 11px;
+	border: 0;
+	margin-left: 8px;
+	flex: 1;
+}
+
+.filter__input:focus {
+	outline: 0;
+}

@@ -1,0 +1,46 @@
+.iconList__ul {
+	display: flex;
+	padding: 0;
+	flex-wrap: wrap;
+	user-select: none;
+	flex: 1;
+	overflow: auto;
+	margin: 0;
+}
+
+.iconList__li {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	font-size: 11px;
+	width: 64px;
+	margin: 8px;
+	padding: 4px;
+	color: #333333;
+	background: #ffffff;
+}
+
+.iconList__li:hover {
+	background: #f0f0f0;
+}
+
+.iconList__icon.icon--8 {
+	margin: 20px;
+}
+
+.iconList__icon.icon--16 {
+	margin: 16px;
+}
+
+.iconList__icon.icon--24 {
+	margin: 12px;
+}
+
+.iconList__icon.icon--32 {
+	margin: 8px;
+}
+
+.iconList__title {
+	text-align: center;
+}

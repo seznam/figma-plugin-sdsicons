@@ -1,0 +1,7 @@
+{
+  "name": "SDS Icons",
+  "id": "863872242646484057",
+  "api": "1.0.0",
+  "main": "dist/plugin.js",
+  "ui": "dist/ui.html"
+}

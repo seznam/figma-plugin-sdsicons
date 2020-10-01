@@ -1,0 +1,34 @@
+/* Variables */
+:root {
+	--spacing: 8px;
+	--color-white: #fff;
+	--color-dark: #333;
+	--color-primary: #18a0fb;
+}
+
+/* Fonts */
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 400;
+	src: url('https://rsms.me/inter/font-files/Inter-Regular.woff2') format('woff2'), url('https://rsms.me/inter/font-files/Inter-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Inter';
+	font-style: normal;
+	font-weight: 500;
+	src: url('https://rsms.me/inter/font-files/Inter-Medium.woff2') format('woff2'), url('https://rsms.me/inter/font-files/Inter-Medium.woff') format('woff');
+}
+
+/* Global styles */
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	margin: 0;
+}

@@ -1,0 +1,91 @@
+{
+  "private": true,
+  "name": "figma-plugin-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "Figma plugin TypeScript boilerplate to start developing right away.",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack --watch",
+    "prebuild": "npm run lint:fix && rimraf dist/*",
+    "build": "webpack -p",
+    "lint": "npm run lint:ts && npm run lint:css",
+    "lint:fix": "npm run lint:ts:fix && npm run lint:css:fix",
+    "lint:ts": "eslint . --ext .ts,.js,.tsx,.jsx",
+    "lint:ts:fix": "eslint . --ext .ts,.js,.tsx,.jsx",
+    "lint:css": "stylelint 'src/**/*'",
+    "lint:css:fix": "stylelint 'src/**/*' --fix",
+    "test:base": "jest --passWithNoTests",
+    "test:precheck": "test -d dist || npm run build",
+    "pretest": "npm run test:precheck",
+    "test": "npm run test:base",
+    "pretest:watch": "npm run test:precheck",
+    "test:watch": "npm run test:base -- --watch"
+  },
+  "author": {
+    "name": "Aarón García Hervás",
+    "email": "aarongarciahervas@gmail.com",
+    "url": "https://twitter.com/aarongarciah"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate"
+  },
+  "homepage": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate#readme",
+  "devDependencies": {
+    "@types/figma": "^1.0.3",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.3.0",
+    "@typescript-eslint/parser": "^4.3.0",
+    "css-loader": "^4.3.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-react": "^7.21.2",
+    "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "^10.4.0",
+    "rimraf": "^3.0.2",
+    "style-loader": "^1.2.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-recommended": "^3.0.0",
+    "ts-jest": "^26.4.1",
+    "ts-loader": "^8.0.4",
+    "typescript": "^4.0.3",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "keywords": [
+    "figma",
+    "plugin",
+    "figma plugin",
+    "boilerplate",
+    "typescript",
+    "eslint",
+    "stylelint"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@sznds/icons": "^0.4.1",
+    "inline-chunk-html-plugin": "^1.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
