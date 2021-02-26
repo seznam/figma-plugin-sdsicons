@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '~/ui/components/Icon';
 // @ts-ignore
 import ICONS from '@sznds/icons/tester';
-import { UIActionTypes } from '~/types';
+import { EUIAction } from '~/types';
 import { IFilter } from '~/ui/interfaces';
 
 import './style.css';
@@ -21,7 +21,7 @@ export default function IconList({
 			const index = ICONS[key].title.lastIndexOf(' ');
 
 			return <li key={key} title={ICONS[key].title.substring(index + 1)} className="iconList__li" onClick={() => {
-				parent.postMessage({ pluginMessage: { type: UIActionTypes.CREATE_ICON, payload: { ...ICONS[key].icon, name: ICONS[key].title } } }, '*');
+				parent.postMessage({ pluginMessage: { type: EUIAction.CREATE_ICON, payload: { ...ICONS[key].icon, name: ICONS[key].title } } }, '*');
 			}}>
 				<Icon symbol={ICONS[key].icon} className="iconList__icon" />
 				<p className="iconList__title">{ICONS[key].title.substring(0, index)}</p>

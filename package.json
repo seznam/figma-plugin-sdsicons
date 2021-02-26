@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "figma-plugin-typescript-boilerplate",
-  "version": "1.0.0",
+  "name": "sds-icons-figma-plugin",
+  "version": "1.1.0",
   "description": "Figma plugin TypeScript boilerplate to start developing right away.",
   "scripts": {
     "start": "npm run dev",
@@ -22,16 +22,15 @@
     "test:watch": "npm run test:base -- --watch"
   },
   "author": {
-    "name": "Aarón García Hervás",
-    "email": "aarongarciahervas@gmail.com",
-    "url": "https://twitter.com/aarongarciah"
+    "name": "Jakub Kraft",
+    "email": "jakub.kraft@firma.seznam.cz"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate"
+    "url": "https://github.com/seznam/figma-plugin-sdsicons"
   },
-  "homepage": "https://github.com/aarongarciah/figma-plugin-typescript-boilerplate#readme",
+  "homepage": "https://github.com/seznam/figma-plugin-sdsicons#readme",
   "devDependencies": {
     "@types/figma": "^1.0.3",
     "@types/jest": "^26.0.14",
@@ -62,10 +61,9 @@
     "figma",
     "plugin",
     "figma plugin",
-    "boilerplate",
-    "typescript",
-    "eslint",
-    "stylelint"
+	"SDS",
+	"SDS icons",
+	"icons"
   ],
   "husky": {
     "hooks": {
@@ -83,7 +81,7 @@
     ]
   },
   "dependencies": {
-    "@sznds/icons": "^0.4.1",
+    "@sznds/icons": "^0.4.2",
     "inline-chunk-html-plugin": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
