@@ -14,6 +14,10 @@
 	color: #b3b3b3;
 }
 
+.filter__label span {
+	user-select: none;
+}
+
 .filter__label:focus-within {
 	border: 1px solid transparent;
 	outline: 2px solid #18a0fb;
@@ -29,4 +33,49 @@
 
 .filter__input:focus {
 	outline: 0;
+}
+
+.filter__p {
+	margin: 8px 0 0 0;
+	user-select: none;
+}
+
+.filter__sizeLabel {
+	font-size: 11px;
+	color: rgb(51, 51, 51);
+	display: inline-flex;
+	align-items: center;
+}
+
+.filter__sizeLabel + .filter__sizeLabel {
+	margin-left: 8px;
+}
+
+.filter__checkbox {
+	appearance: none;
+	margin: 0;
+}
+
+.filter__checkbox:focus {
+	outline: none;
+}
+
+.filter__checkbox::after {
+	content: "";
+	display: inline-flex;
+	margin: 11px;
+	width: 12px;
+	height: 12px;
+	border-radius: 2px;
+	box-sizing: border-box;
+	background-color: #fff;
+	border: 1px solid #333;
+}
+
+.filter__checkbox:checked::after {
+	border: 1px solid #18a0fb;
+	background-color: #18a0fb;
+	background-image: url('data:image/svg+xml;utf8,<svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.17647 2.82377L3.05882 4.70613L6.82353 0.941406L8 2.11788L3.05882 7.05908L0 4.00024L1.17647 2.82377Z" fill="white"/></svg>');
+	background-position: 50%;
+	background-repeat: no-repeat;
 }

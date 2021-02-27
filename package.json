@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "sds-icons-figma-plugin",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Figma plugin TypeScript boilerplate to start developing right away.",
   "scripts": {
     "start": "npm run dev",

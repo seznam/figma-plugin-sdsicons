@@ -7,7 +7,10 @@ import './style.css';
 
 const DEFAULT_FILTER: IFilter = {
 	phrase: '',
-	size: 0,
+	size8: true,
+	size16: true,
+	size24: true,
+	size32: true,
 };
 
 export default function App() {

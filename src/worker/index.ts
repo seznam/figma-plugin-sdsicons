@@ -15,7 +15,7 @@ figma.ui.onmessage = function onMessage({ type, payload }: IUIAction): void {
 			{
 				// eslint-disable-next-line id-length
 				const { d, size, name } = payload as IIconPayload;
-				const frame = figma.createNodeFromSvg(`<svg x="0px" y="0px" viewBox="0 0 ${size} ${size}"><path fillRule="evenodd" d="${d}" /></svg>`);
+				const frame = figma.createNodeFromSvg(`<svg x="0px" y="0px" viewBox="0 0 ${size} ${size}"><path fill-rule="evenodd" d="${d}" /></svg>`);
 
 				frame.name = name;
 				frame.children.forEach(child => {
