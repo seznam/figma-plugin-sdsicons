@@ -1,5 +1,5 @@
-/* eslint-disable no-magic-numbers */
 import { EUIAction, IUIAction } from '~/types';
+import { PLUGIN_WIDTH, PLUGIN_HEIGHT } from '~/constants';
 
 interface IIconPayload {
 	d: string;
@@ -7,7 +7,12 @@ interface IIconPayload {
 	name: string;
 }
 
-figma.showUI(__html__, { width: 360, height: 320 });
+interface IResizePayload {
+	width: number;
+	height: number;
+}
+
+figma.showUI(__html__, { width: PLUGIN_WIDTH, height: PLUGIN_HEIGHT });
 
 figma.ui.onmessage = function onMessage({ type, payload }: IUIAction): void {
 	switch (type) {
@@ -26,6 +31,14 @@ figma.ui.onmessage = function onMessage({ type, payload }: IUIAction): void {
 				figma.currentPage.appendChild(frame);
 				figma.currentPage.selection = [frame];
 				figma.viewport.scrollAndZoomIntoView([frame]);
+			}
+
+			break;
+		case EUIAction.RESIZE:
+			{
+				const { width, height } = payload as IResizePayload;
+
+				figma.ui.resize(width, height);
 			}
 
 			break;

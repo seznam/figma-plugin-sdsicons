@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Filter from '~/ui/components/Filter';
 import IconList from '~/ui/components/IconList';
+import Resizer from '~/ui/components/Resizer';
 import { IFilter } from '~/ui/interfaces';
 
 import './style.css';
@@ -19,5 +20,6 @@ export default function App() {
 	return <main className="app__main">
 		<Filter filter={filter} onChange={setFilter} />
 		<IconList filter={filter} />
+		<Resizer />
 	</main>;
 }

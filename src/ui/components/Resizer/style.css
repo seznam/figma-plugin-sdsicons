@@ -1,0 +1,13 @@
+.resizer {
+	cursor: se-resize;
+	align-self: flex-end;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 24px 24px;
+	border-color: transparent transparent rgba(0, 0, 0, .1) transparent;
+}
+
+.resizer:hover {
+	border-color: transparent transparent var(--color-primary) transparent;
+}
