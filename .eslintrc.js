@@ -63,7 +63,7 @@ module.exports = {
 		'no-loop-func': 'error',
 		'no-magic-numbers': ['warn', {
 			ignoreArrayIndexes: true,
-			ignore: [-1, 0, 1],
+			ignore: [-1, 0, 1, 2],
 		}],
 		'no-multi-spaces': 'error',
 		'no-multi-str': 'error',
