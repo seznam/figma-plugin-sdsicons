@@ -11,6 +11,10 @@ interface IIconListOptions {
 	filter: IFilter;
 }
 
+function compare(first: IIcon, second: IIcon): number {
+	return first.title.localeCompare(second.title);
+}
+
 export default function IconList({
 	filter,
 }: IIconListOptions) {
@@ -41,6 +45,12 @@ export default function IconList({
 				rest.push(ICONS[key]);
 		}
 	});
+
+	arr8.sort(compare);
+	arr16.sort(compare);
+	arr24.sort(compare);
+	arr32.sort(compare);
+	rest.sort(compare);
 
 	return <div className="iconList">
 		{filter.size8 && arr8.length ? <IconListSection icons={arr8} title="8×8" /> : null}
