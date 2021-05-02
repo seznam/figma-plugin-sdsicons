@@ -17,8 +17,8 @@ module.exports = (_env, argv) => ({
 	module: {
 		rules: [
 			{ test: /\.tsx?$/u, use: 'ts-loader', exclude: /node_modules/u },
-			{ test: /\.css$/u, loader: [{ loader: 'style-loader' }, { loader: 'css-loader' }] },
-			{ test: /\.(png|jpg|gif|webp|svg|zip)$/u, loader: [{ loader: 'url-loader' }] },
+			{ test: /\.css$/u, use: ['style-loader', 'css-loader'] },
+			{ test: /\.(png|jpg|gif|webp|svg|zip)$/u, use: ['url-loader'] },
 		],
 	},
 
@@ -40,6 +40,7 @@ module.exports = (_env, argv) => ({
 			filename: 'ui.html',
 			inlineSource: '.(js)$',
 			chunks: ['ui'],
+			inject: 'body',
 		}),
 		new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/.*/u]),
 	],
