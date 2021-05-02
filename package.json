@@ -81,7 +81,7 @@
     ]
   },
   "dependencies": {
-    "@sznds/icons": "^0.4.2",
+    "@sznds/icons": "^0.4.3",
     "inline-chunk-html-plugin": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
